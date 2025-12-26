@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var email = prompt("Enter your Email")
+    var password = prompt("Enter your Password")
+    var mobileNumber = +prompt("Enter your Mobile Number")
+    var fingerPrint = prompt("Enter your Finger Print")
+    var otp = +prompt("Enter your One Time Password")
+
+
+
+    if (email === "mustafa@gmail.com") {
+        console.log("Email Verified")
+
+        if (password === "mustafa123") {
+            console.log("Password Verified");
+
+if(mobileNumber === 923213880304){
+    console.log("Mobile Nuber Verified");
+
+
+if(fingerPrint === "myfinger-print"){
+    console.log("Finger Print Verified");
+    
+if(otp === 123456){
+    console.log("Access Granted");
+}else{
+    console.log("Invalid otp");
+    
+}
+
+}else{
+    console.log("Finger Print not Match");
+    
+}
+
+
+
+}else{
+    console.log("Invalid Mobile Number");
+    
+}
+
+
+
+        } else {
+            console.log("Invalid Password");
+        }
+
+    } else {
+        console.log("Invalid Email")
+
+    }
+
+</script>
+
+</html>
