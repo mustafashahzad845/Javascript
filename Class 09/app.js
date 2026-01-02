@@ -1,25 +1,25 @@
 // for(var i = 100 ; i >= -100 ; i--){
 //     console.log(i);
-    
+
 // }
 
 // for(var i = 1 ; i<= 100 ; i++){
 //     // console.log(i);
 //     if(i % 2 === 0){
 //         console.log("Even Number" , i);
-        
+
 //     }
 // }
 
 
 // for (var i = 1 ; i <= 100; i++){
-    
+
 //     if (i % 2 === 1) {
 // console.log("Odd Number" , i);
 
 //     }else if(i % 2 === 0){
 //     console.log("Even Number" , i);
-    
+
 // }
 // }
 
@@ -39,7 +39,7 @@
 //     if(i === 5 || i === 10 || i === 15 || i===20 || i === 25 || i=== 30 || i === 35|| i === 40 || i === 45 || i === 50) {
 // continue
 //     }
-    
+
 //         console.log(i);
 
 // }
@@ -62,7 +62,7 @@
 
 // if(isMatch === "not match"){
 //     alert("Not Welcome")
- 
+
 // }
 
 // console.log(isMatch);
@@ -87,7 +87,7 @@
 
 // if(isMatch === "Username not found"){
 //     alert("Not Welcome")
-    
+
 // }
 
 // console.log(isMatch);
@@ -106,26 +106,27 @@
 
 
 
+var startingNumber = +prompt("Enter Starting Number")
+var endingNumber = +prompt("Enter Ending Number")
+var even_odd = prompt("Which type of number ou want?  Even or Odd")
+
+for (var i = startingNumber; i <= endingNumber; i++) {
+
+    if (even_odd === "Even" || even_odd === "even") {
 
 
-var startingNumber = +prompt("Enter starting number")
-var endingNumber = +prompt("Enter ending number")
-var even_odd = prompt("Which type of number you want?  Even or Odd").trim()
 
-for(var i = startingNumber ; i <= endingNumber ; i++){
+        if (i % 2 === 0) {
+            document.writeln("Even Number ", i, "<br />")
+        }
 
-    if(even_odd === "Even" || "even"){
-  
-if( i % 2 === 0){
-    document.writeln("Even Number " , i , "<br />")
+    } else if (even_odd === "Odd" || even_odd === "odd") {
+
+
+        if (i % 2 === 1){
+           document.writeln("Odd Number ", i , "<br />")
+    }
+
 }
 
-
-
-    }else if(even_odd === "Odd" || even_odd === "odd"){
-        
-        if(i % 2 === 1){
-            document.writeln("Odd Number " , i , "<br />")
-        }
-    }
 }
