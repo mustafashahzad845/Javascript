@@ -55,8 +55,29 @@
 
 // }else if(text_case === "capitalize"){
 //     console.log(str[0].toUpperCase() + str.slice(1).toLowerCase());
-    
+
 // }else{
 //     console.log("Invalid Case");
-    
+
 // }
+
+
+
+
+// var str = "My name   is Mustafa"
+// // var str = prompt("Enter some text")
+
+// for (var i = 0; i < str.length; i++) {
+
+//     console.log(str.slice(i, i + 2));
+
+//     if (str.slice(i, i + 2) == "  ") {
+//        alert("Double space not allow")
+//        break
+//     }
+// }
+
+// var str = "sAylAnI"
+var str = prompt("Enter some text")
+console.log(str[0].toLocaleUpperCase() + str.slice(1).toLocaleLowerCase());
+
