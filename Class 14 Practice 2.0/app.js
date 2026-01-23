@@ -96,6 +96,47 @@
 
 
 
+var str = prompt("Enter your text")
+var userCase = prompt("Which type of case you want lowercase , uppercase, capitializecase").toLocaleLowerCase()
+
+if (userCase === "lowercase") {
+    
+console.log(str.toLowerCase());
+
+
+} else if(userCase === "uppercase") {
+    console.log(str.toUpperCase());
+    
+}else if(userCase === "capitializecase" || userCase === "capitalizecase"){
+
+    var strArr = str.split(" ")
+    var arr = []
+
+    for(var i = 0 ; i < strArr.length ; i++){
+
+        // if(str.slice(i , i + 2) === "  "){
+        //  alert("Double space not🚫")
+
+        //  break
+        // }
+
+        console.log(str.slice(i , i + 2));
+        
+
+var word = strArr[i]
+word = word.slice(0 , 1).toUpperCase() + word.slice(1).toLowerCase()
+
+arr.push(word)
+    }
+
+    // console.log(arr);
+    var capitalizecase = arr.join(" ")
+    console.log(capitalizecase);
+    
+    
+}
+
+
 
 
 
