@@ -24,9 +24,19 @@ input{
     /* margin-bottom: 15px; */
     padding: 48px 12px;
     color: #fff;
+    z-index: 1;
     font-size: 22px;
     width: 80%;
 }
+
+/* input:disabled{
+     
+    color: #fff !important;         
+    opacity: 1;                      
+    -webkit-text-fill-color: #fff;  
+    background: transparent;       
+
+} */
 main{
     width: 100%;
     height: 100vh;
