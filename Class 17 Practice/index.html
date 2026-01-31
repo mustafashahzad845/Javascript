@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" readonly id="input" width="20%">
+   <table border="1" width="20%">
+    <tr>
+        <td onclick="AC()">AC</td>
+        <td onclick="del()">DEL</td>
+        <td onclick="percentage()">%</td>
+        <td onclick="getNumber('/')">/</td>
+    </tr>
+
+    <tr>
+        <td onclick="getNumber(7)">7</td>
+        <td onclick="getNumber(8)">8</td>
+        <td onclick="getNumber(9)">9</td>
+        <td onclick="getNumber('*')">*</td>
+    </tr>
+
+
+  <tr>
+        <td onclick="getNumber(4)">4</td>
+        <td onclick="getNumber(5)">5</td>
+        <td onclick="getNumber(6)">6</td>
+        <td onclick="getNumber('-')">-</td>
+    </tr>
+
+
+      <tr>
+        <td onclick="getNumber(1)">1</td>
+        <td onclick="getNumber(2)">2</td>
+        <td onclick="getNumber(3)">3</td>
+        <td onclick="getNumber('+')">+</td>
+    </tr>
+
+
+      <tr>
+        <td colspan="2" onclick="getNumber(0)">0</td>
+        <!-- <td  onclick="getNumber(0o0)">00</td> -->
+        <td onclick="getNumber('.')">.</td>
+        <td onclick="calc()">=</td>
+        
+    </tr>
+   </table> 
+</body>
+<script src="app.js"></script>
+</html>
