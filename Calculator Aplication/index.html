@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Application</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <img src="./bulboff.png" onmouseover="bulbImgHandle()" onmouseout="bulbImgHandle()" alt="" id="bulbImg" width = 300
+        height = 300> -->
+    <!-- <button onclick="bulbImgHandle()" id="btn">ON</button> -->
+    <!-- <button onclick="bulbOffImg()">OFF</button> -->
+         <!-- <button onmouseover="bulbImgHandle()" id="btn">ON</button> -->
+<main>
+
+<div class="calculator-container">
+
+<input type="text"  id="input" disabled>
+
+<table>
+    <tr>
+        <td class="bg-lightgray-btn" onclick="AC()">AC</td>
+        <td class="bg-lightgray-btn" onclick="del()">DEL</td>
+        <td class="bg-lightgray-btn" onclick="percentage()">%</td>
+        <td onclick="valueGet('/')" class="bg-yellow-btn">/</td>
+    </tr>
+
+     <tr>
+        <td onclick="valueGet(7)" class="bg-gray-btn">7</td>
+        <td onclick="valueGet(8)" class="bg-gray-btn">8</td>
+        <td onclick="valueGet(9)" class="bg-gray-btn">9</td>
+        <td onclick="valueGet('*')" class="bg-yellow-btn">*</td>
+    </tr>
+
+    <tr>
+        <td onclick="valueGet(4)" class="bg-gray-btn">4</td>
+        <td onclick="valueGet(5)" class="bg-gray-btn">5</td>
+        <td onclick="valueGet(6)" class="bg-gray-btn">6</td>
+        <td onclick="valueGet('-')" class="bg-yellow-btn">-</td>
+    </tr>
+
+    <tr>
+        <td onclick="valueGet(1)" class="bg-gray-btn">1</td>
+        <td onclick="valueGet(2)" class="bg-gray-btn">2</td>
+        <td onclick="valueGet(3)" class="bg-gray-btn">3</td>
+        <td onclick="valueGet('+')" class="bg-yellow-btn">+</td>
+    </tr>
+
+      <tr>
+        <td colspan="2" onclick="valueGet(0)" style="border-radius: 18px;" class="bg-gray-btn">0</td>
+        <td onclick="valueGet('.')" class="bg-gray-btn">.</td>
+        <td onclick="calc()" class="bg-yellow-btn">=</td>
+        
+    </tr>
+</table>
+
+</div>
+</main>
+</body>
+<script src="app.js"></script>
+</html>
