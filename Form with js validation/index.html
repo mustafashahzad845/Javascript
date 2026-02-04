@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <input style="border: 1px solid grey;color: #fff;" type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)"> -->
+<!-- <p></p>
+<p></p>
+<p></p>
+
+
+<div id="parent">
+    <p id="child1">Child 1</p>
+    <p id="child2">Child 2</p>
+    <p id="child3">Child 3</p>
+</div> -->
+
+<main>
+
+<div class="form-container">
+
+<h2>Registration</h2>
+
+<div class="input-box">
+    <i class="fa-regular fa-user"></i>
+<input type="text" placeholder="Enter your username" id="userNameInput">
+<p id="usernameInvalidPara"></p>
+</div>
+
+<div class="input-box">
+    <i class="fa-regular fa-envelope envelope-icon"></i>
+<input type="text" placeholder="Enter your email" id="emailInput">
+<p id="invalidEmailPara"></p>
+
+</div>
+
+<div class="input-box">
+    <i class="fa-solid fa-lock"></i>
+<input type="password" placeholder="Enter your password" id="inputPass">
+<img src="./eye-image-close.png" alt="" id="passwordImg" onclick="passwordImgHandler(this)">
+</div>
+
+<div class="input-box">
+    <i class="fa-solid fa-lock"></i>
+<input type="password" placeholder="Enter Confirm password" id="confirmPasswordInput">
+<p id="notMatchPassword"></p>
+<p id="loginSucessfullyPara"></p>
+</div>
+
+<button onclick="Register()">Register Now</button>
+
+</div>
+
+
+
+
+</main>
+
+
+
+</body>
+<script src="app.js"></script>
+</html>
