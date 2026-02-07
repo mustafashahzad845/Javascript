@@ -2,8 +2,8 @@ function Add() {
     var input = document.getElementById("input")
     console.log(input.value);
 
-if(input.value === ""){
-    alert("Please fill the empty input field")
+if(input.value.trim() === ""){
+    alert("Please fill the empty input field properly")
 
     return
 }
