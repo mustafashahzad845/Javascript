@@ -1,63 +1,45 @@
 function Add() {
-    var input = document.getElementById("input"); 
-    var taskText = input.value;
+    var input = document.getElementById("input")
+    console.log(input.value);
 
-    if (taskText === "") {
-        alert("Empty input field");
-        return;
-    }
+if(input.value === ""){
+    alert("Please fill the empty input field")
 
-    var nayaItem = document.createElement("p");
-    nayaItem.innerHTML = taskText;
-
-    // --- DELETE BUTTON KA CODE YAHAN SE SHURU ---
-    
-    // 1. Khali button create kiya
-    var delBtn = document.createElement("button");
-    
-    // 2. Button par text likha (aap icon bhi daal sakte hain)
-    delBtn.innerText = "Delete";
-    
-    // 3. Button ko thori style di takay wo task ke sath sahi lage
-    delBtn.style.marginLeft = "10px";
-    delBtn.style.cursor = "pointer";
-
-    // 4. Button ko paragraph ke andar daal diya
-    nayaItem.appendChild(delBtn);
-    
-    delBtn.style.background = "blue"
-    delBtn.style.color = "#fff"
-    delBtn.style.padding = "4px 16px"
-    delBtn.style.borderRadius = "12px"
-    delBtn.style.border = "none"
-    delBtn.style.outline = "none"
-
-    delBtn.onclick = function() {
-        nayaItem.style.display = "none"
-    }
- 
-
-    // --- DELETE BUTTON KA CODE KHATAM ---
-
-    // Baki styles wese hi rahengi
-    nayaItem.style.backgroundColor = "#e0f2f1";
-    nayaItem.style.padding = "10px";
-    nayaItem.style.margin = "20px 0";
-    nayaItem.style.borderRadius = "5px";
-    nayaItem.style.display = "flex"; // Text aur button ko line mein rakhne ke liye
-    nayaItem.style.justifyContent = "space-between"; // Button ko kone mein bhejne ke liye
-
-    var container = document.getElementById("listContainer");
-    container.appendChild(nayaItem);
-
-    input.value = "";
-
-
-  
+    return
 }
 
+    var listElement = document.createElement("div")
+    console.log(listElement);
+    var listContainer = document.getElementById("listContainer")
+
+    listContainer.appendChild(listElement)
+
+    var listPara = document.createElement("p")
+    listElement.appendChild(listPara)
 
 
 
+    listPara.innerHTML = input.value
+listPara.className = "listPara"
+
+input.value = ""
+
+    var delButton = document.createElement("button")
+    delButton.innerHTML = "Delete"
+
+    delButton.onclick = function() {
+        listElement.style.display = "none"
+    }
+
+    listElement.className = "listElement"
+
+    delButton.className = "delButton"
+
+    listElement.appendChild(delButton)
 
 
+   
+  
+
+
+}
