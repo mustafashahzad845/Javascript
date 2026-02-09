@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    width: 70%;
+    margin: 20px 0  20px  30px;
+}
+.main-container input{
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(153, 146, 146);
+    padding: 4px 16px;
+    border-radius: 8px;
+        /* border: 3px solid black; */
+
+}
+.main-container input:focus{
+    border: 1.5px solid blue;
+}
+/* .main-container button{
+
+} */
+
+.img-wrapper {
+  perspective: 800px;
+  overflow: hidden;   /* important */
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+  transform: translateZ(0);
+  cursor: pointer;
+}
+
+.img-wrapper:hover .card-img-top {
+  transform: translateZ(60px);
+}
+
+.InputEdit{
+    border-radius: 4px;
+    padding: 6px ;
+
+}
+.InputEdit:focus{
+    /* display: none; */
+        border: 1px solid rgb(153, 146, 146);
+
+}
