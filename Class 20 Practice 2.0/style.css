@@ -37,6 +37,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 width: 40%;
 margin: 20px auto;
 padding: 40px 15px;
+border-radius: 12px;
 /* display: flex;
 flex-direction: column; */
 }
@@ -62,4 +63,31 @@ flex-direction: column; */
     padding: 8px 16px;
     cursor: pointer;
     width: max-content;
+}
+.addBtn:hover{
+    background-color: #000000;
+}
+.DelAllBtn{
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #1279e8;
+    font-weight: 600;
+        padding: 8px 16px;
+    border-radius: 12px;
+    margin: 0 0 0 8px;
+    cursor: pointer;
+
+}
+
+.DelAllBtn:hover{
+        background-color: #0a67cb;
+
+}
+
+/* Js se element aarahe hain wo */
+.card-container{
+display: flex;
+flex-direction: column;
+border-radius: 4px;
 }
