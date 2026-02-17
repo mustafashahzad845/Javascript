@@ -205,7 +205,7 @@ select{
     padding: 8px 16px;
     border: 1px solid #d3d3d3;
     border-radius: 8px;
-    
+    background-color: #fff !important;
 }
 select:focus{
     border: 1px solid rgb(13, 13, 168);
