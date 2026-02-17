@@ -2,8 +2,8 @@ var parent = document.getElementById("parent")
 var input = document.getElementById("input")
 var h5InputElem = document.createElement("input")
 function addCard() {
-    console.log("Add Card");
-    console.log(input.value);
+    // console.log("Add Card");
+    // console.log(input.value);
     
 
 if(input.value.trim() < 3){
@@ -39,9 +39,9 @@ function delAll() {
 
 
 function deleteIndv(btn) {
-console.log(btn);
+// console.log(btn);
 
-console.log(btn.parentNode.parentNode)
+// console.log(btn.parentNode.parentNode)
 var  cardelem = btn.parentNode.parentNode
 cardelem.remove()
 }
@@ -65,9 +65,9 @@ h5InputElem.style.border = "1px solid #d3d3d3"
 }
 
 function saveData(element) {
-console.log(element);
+// console.log(element);
 var h5Elem = element.previousElementSibling.previousElementSibling.previousElementSibling
-console.log(h5Elem);
+// console.log(h5Elem);
 var finalElem = document.createElement("h5")
  h5Elem.replaceWith(finalElem)
 
