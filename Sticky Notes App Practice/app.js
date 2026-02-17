@@ -11,7 +11,7 @@ if(input.value.trim() < 3){
     return;
 }
 
-var card = `<div class="card" style="width: 18rem;">
+var card = `<div class="card" style="width: 18rem;margin-bottom : 20px">
   <img src="./mountain-img.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${input.value}</h5>
