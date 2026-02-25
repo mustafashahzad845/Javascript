@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto" , "Poppins";
+    color: #000;
+}
+
+body{
+    background-color: #fff;
+}
+
+.QuizContainer{
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 70px auto;
+
+    padding:15px 0px;
+
+}
+.QuizContainer .header{
+/* padding: 15px 12px; */
+    padding:15px 36px;
+
+}
+
+.QuizContainer .header h2{
+    border-bottom: 1px solid lightgray;
+padding:  0 0 10px 0;
+/* margin:  0  16px 0; */
+}
+
+.QuizContainer .body{
+    padding:  16px 36px 20px;
+        border-bottom: 1px solid lightgray ;
+   
+
+}
+.QuizContainer .body  ul{
+    list-style-type: none;
+    /* border: 1px solid red; */
+    margin: 12px 0;
+}
+
+.QuizContainer .body li{
+    background-color: #F7F3FF;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.QuizContainer .footer{
+display: flex;
+justify-content: space-between;
+padding: 15px 36px;
+}
+.QuizContainer .footer button{
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+background-color: #5545BF;
+padding: 8px 16px;
+border-radius: 8px;
+}
+
+.scoreCard{
+    width: 50%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+padding: 40px 20px;
+border-radius: 12px;
+}
+.scoreCard h3{
+    margin:  10px 10px;
+}
+.scoreCard p{
+    margin:  10px 10px;
+}
+
+
+@media screen and (min-width : 600px) and (max-width : 830px){
+    .QuizContainer{
+        width: 75%;
+        padding: 12px 0;
+    }
+}
+
+@media screen and (min-width : 320px) and (max-width : 600px){
+    .QuizContainer{
+        width: 90%;
+            padding:12px 0px;
+
+    }
+    .QuizContainer .body{
+        padding: 12px 24px 20px;
+    }
+    .QuizContainer .body h2{
+        font-size: 22px;
+    }
+    .QuizContainer .header{
+/* padding: 15px 12px; */
+    padding:12px 24px;
+
+}
+}
