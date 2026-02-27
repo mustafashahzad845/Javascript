@@ -108,18 +108,36 @@ var quizQuestions = [
             "hidden: true"
         ],
         answer: "visibility: hidden"
-    }
+    } 
+
+
+    ,
+
+    
 ];
 var counter = 0;
 var counterDisplay = document.getElementById("counterDisplay")
 var nextButton = document.getElementById("nextButton")
 
+var QuizContainer = document.getElementById("QuizContainer")
+
+counterDisplay.innerHTML = `${counter + 1} / ${quizQuestions.length}`
+
+ var questionElement = document.getElementById("questionElement")
+ var optionElement = document.getElementById("optionElement")
+
+var scoreCardParent = document.getElementById("scoreCardParent")
+var scoreCardElement = document.getElementById("scoreCard")
+scoreCardElement.className = "scoreCardElement"
+
+var backToQuizBtn = document.getElementById("backToQuizBtn")
+
+
 function startQuiz() {
  console.log(quizQuestions);
 
  
- var questionElement = document.getElementById("questionElement")
- var optionElement = document.getElementById("optionElement")
+
  console.log(questionElement);
  console.log(optionElement);
 
@@ -137,39 +155,102 @@ console.log(li);
 
 
 
-nextButton.disabled = false
+
 
 
 }
+
+
 return question
 }
 
-var scoreCardParent = document.getElementById("scoreCardParent")
 
 function nextBtn() {
 
-
+var percentage = (score / quizQuestions.length) * 100
     
     counter++
     console.log(counter);
   
-var QuizContainer = document.getElementById("QuizContainer")
+var grade;
 
-    if(counterDisplay.innerHTML == "10/10"){
-QuizContainer.remove()
-var scoreCard = `<div class="scoreCard">
-    <h3>Name : Mustafa Shahzad</h1>
-    <p>Score : 7/10</p>
-    <p>Percentage : 50%</p>
-</div>`
+if(percentage >= 80 && percentage <= 100){
+    grade = "A+"
+}else if(percentage < 80 && percentage >= 70){
+    grade = "A"
+}else if(percentage < 70 && percentage >= 60){
+    grade = "B"
+}else if(percentage < 60 && percentage >= 50){
+    grade = "C"
+}else if(percentage < 50 && percentage >= 40){
+    grade = "D"
+}else if(percentage < 40){
+    grade = "F"
+}
 
+
+ var scoreCard = `
+    
+    <p class=reportParaElement style="margin : 10px 0 ; font-size : 20px"> Correct Answer : ${score} </p>
+    <p class=reportParaElement style="margin : 10px 0 ; font-size : 20px">Wrong Answer : ${quizQuestions.length - score}</p>
+    <p class=reportParaElement style="margin : 10px 0 ; font-size : 20px">Total Answers : ${quizQuestions.length}</p>
+    <p class=reportParaElement style="margin : 10px 0 ; font-size : 20px">percentage : ${percentage}%</p>
+    <p class=reportParaElement style="margin : 10px 0 ; font-size : 20px">Grade :  ${grade} </p>
+`
+scoreCard.className = "scoreCard"
+scoreCardElement.innerHTML = scoreCard
+
+
+    if(counterDisplay.innerHTML == `${quizQuestions.length}/${quizQuestions.length}`){
+QuizContainer.style.display = "none"
 scoreCardParent.innerHTML = scoreCard
+scoreCardParent.style.display = "block"
+
+scoreCardParent.style.width = "max-content"
+scoreCardParent.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px"
+scoreCardParent.style.padding = "40px 50px"
+scoreCardParent.style.margin = "70px auto 30px"
+scoreCardParent.style.borderRadius = "12px"
+
+
+var reportAllPara = document.getElementsByClassName("reportParaElement")
+
+
+for(var value of reportAllPara){
+// reportAllPara[value].style.margin = "10px 0"
+console.log(value);
+
+
+backToQuizBtn.style.display = "block"
+console.log(backToQuizBtn);
+
+
+
+
+
+
+}
+
         return
     }
-            counterDisplay.innerHTML = `${counter + 1}/10`
+
+
+   
+
+scoreCardParent.innerHTML = scoreCardElement
+
+
+                        nextButton.disabled = true
+                        nextButton.style.opacity = 0.7
+
+            counterDisplay.innerHTML = `${counter + 1}/${quizQuestions.length}`
 
 
     startQuiz()
+
+
+
+
 }
 
 
@@ -178,6 +259,12 @@ console.log(counter);
 
 var score = 0;
 
+
+    nextButton.setAttribute("disabled", true)
+
+
+
+
 function checkAns(liElement) {
 
 var liAll = document.getElementsByTagName("li")
@@ -185,7 +272,7 @@ console.log(liAll);
 
 for(var i = 0 ; i< liAll.length ; i++){
    
-        liAll[i].onclick = null
+        liAll[i].removeAttribute("onclick")
     
 
     }
@@ -213,8 +300,56 @@ if(liElement.innerHTML == quizQuestions[counter].answer){
         liElement.style.color = "#fff"
         liElement.style.transition = "0.3s"
 
+
+        for(var i = 0 ; i < liAll.length ; i++){
+            console.log(i);
+
+            if(liAll[i].innerHTML === quizQuestions[counter].answer){
+            liAll[i].style.background = "#4ade80"    
+            liAll[i].style.color = "#fff" 
+                    liElement.style.transition = "0.3s"
+   
+            }
+       
+        }
+
+        
+//  nextButton.style.opacity = 1;
+//         nextButton.style.pointerEvents = "visible";
+        
+
+       
+
+
 }
+
+scoreCardParent.style.display = "none"
+
+     nextButton.removeAttribute("disabled")
+            nextButton.style.opacity = 1
+
+            nextButton.disabled = false
+
 console.log("Final Answer" , score ,"/ 10");
 
 
+
+}
+
+
+function backToQuiz() {
+    QuizContainer.style.display = "block"
+    scoreCardParent.style.display = "none"
+    backToQuizBtn.style.display = "none"
+
+counter = 0
+score = 0
+
+nextButton.disabled  = true
+nextButton.style.opacity = 0.7
+
+counterDisplay.innerHTML = `${counter+1} / ${quizQuestions.length}`
+    startQuiz()
+
+    
 }
