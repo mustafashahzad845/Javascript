@@ -134,12 +134,12 @@ var backToQuizBtn = document.getElementById("backToQuizBtn")
 
 
 function startQuiz() {
- console.log(quizQuestions);
+//  //console.log(quizQuestions);
 
  
 
- console.log(questionElement);
- console.log(optionElement);
+//  //console.log(questionElement);
+ //console.log(optionElement);
 
 
  var question = quizQuestions[counter].question
@@ -148,10 +148,10 @@ var options = quizQuestions[counter].options
 
 optionElement.innerHTML = ""
  for(var i = 0 ; i < options.length ; i++){
-// console.log(i);
+// //console.log(i);
 var li = `<li onclick=checkAns(this) id=li>${options[i]}</li>`
 optionElement.innerHTML += li 
-console.log(li);
+//console.log(li);
 
 
 
@@ -170,7 +170,7 @@ function nextBtn() {
 var percentage = (score / quizQuestions.length) * 100
     
     counter++
-    console.log(counter);
+    //console.log(counter);
   
 var grade;
 
@@ -218,11 +218,11 @@ var reportAllPara = document.getElementsByClassName("reportParaElement")
 
 for(var value of reportAllPara){
 // reportAllPara[value].style.margin = "10px 0"
-console.log(value);
+//console.log(value);
 
 
 backToQuizBtn.style.display = "block"
-console.log(backToQuizBtn);
+//console.log(backToQuizBtn);
 
 
 
@@ -254,7 +254,7 @@ scoreCardParent.innerHTML = scoreCardElement
 }
 
 
-console.log(counter);
+//console.log(counter);
 
 
 var score = 0;
@@ -268,7 +268,7 @@ var score = 0;
 function checkAns(liElement) {
 
 var liAll = document.getElementsByTagName("li")
-console.log(liAll);
+//console.log(liAll);
 
 for(var i = 0 ; i< liAll.length ; i++){
    
@@ -287,22 +287,22 @@ for(var i = 0 ; i< liAll.length ; i++){
 
 
 
-console.log(liElement.innerHTML);
+//console.log(liElement.innerHTML);
 if(liElement.innerHTML == quizQuestions[counter].answer){
     score++
-    console.log("Sahi Jawab");
+    //console.log("Sahi Jawab");
     liElement.style.backgroundColor = "#4ade80"
          liElement.style.color = "#fff"
         liElement.style.transition = "0.3s"
 }else{
-    console.log("Galata jawab");
+    //console.log("Galata jawab");
         liElement.style.backgroundColor = "#dc2626"
         liElement.style.color = "#fff"
         liElement.style.transition = "0.3s"
 
 
         for(var i = 0 ; i < liAll.length ; i++){
-            console.log(i);
+            //console.log(i);
 
             if(liAll[i].innerHTML === quizQuestions[counter].answer){
             liAll[i].style.background = "#4ade80"    
@@ -330,7 +330,7 @@ scoreCardParent.style.display = "none"
 
             nextButton.disabled = false
 
-console.log("Final Answer" , score ,"/ 10");
+//console.log("Final Answer" , score ,"/ 10");
 
 
 
