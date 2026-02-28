@@ -1,165 +1,184 @@
 var quizQuestions = [
     {
         id: 1,
-        question: "Which HTML tag is used to define a table row?",
+        question: "What is the full form of HTML?",
         options: [
-            "tr",
-            "td",
-            "table-row",
-            "row"
+            "Hyper Text Markup Language",
+            "Hyper Text Programming Language",
+            "Hyper Text Styling Language",
+            "Hyper Text Scripting Language"
         ],
-        answer: "tr"
+        answer: "Hyper Text Markup Language"
     },
     {
         id: 2,
-        question: "What does CSS stand for?",
+        question: "Which tag is used to add a link in an HTML page?",
         options: [
-            "Cascading Style Sheets",
-            "Creative Style System",
-            "Computer Style Sheets",
-            "Colorful Style Syntax"
+            "a",
+            "link",
+            "href",
+            "hyperlink"
         ],
-        answer: "Cascading Style Sheets"
+        answer: "a"
     },
     {
         id: 3,
-        question: "Which HTML tag is used for inserting an image?",
+        question: "Which property changes the color of text in CSS?",
         options: [
-            "img",
-            "image",
-            "src",
-            "picture"
+            "font-color",
+            "text-color",
+            "color",
+            "background-color"
         ],
-        answer: "img"
+        answer: "color"
     },
     {
         id: 4,
-        question: "Which CSS property is used to change the background color?",
+        question: "Which CSS property sets the text size?",
         options: [
-            "background-color",
-            "color",
-            "bgcolor",
-            "background-style"
+            "text-style",
+            "font-size",
+            "text-size",
+            "font-style"
         ],
-        answer: "background-color"
+        answer: "font-size"
     },
     {
         id: 5,
-        question: "Which JavaScript function is used to print messages to the console?",
+        question: "In which element is JavaScript code written?",
         options: [
-            "console.print()",
-            "console.log()",
-            "print()",
-            "log.console()"
+            "javascript",
+            "js",
+            "script",
+            "code"
         ],
-        answer: "console.log()"
+        answer: "script"
     },
     {
         id: 6,
-        question: "Which HTML tag is used to create a dropdown list?",
+        question: "How do we write a single-line comment in JavaScript?",
         options: [
-            "select",
-            "dropdown",
-            "option",
-            "list"
+            "//",
+            "/* */",
+            "#",
         ],
-        answer: "select"
+        answer: "//"
     },
     {
         id: 7,
-        question: "Which CSS property controls the spacing between letters?",
+        question: "Which keyword is used to create a variable in JavaScript?",
         options: [
-            "letter-spacing",
-            "text-spacing",
-            "word-spacing",
-            "spacing"
+            "var",
+            "int",
+            "string",
+            "declare"
         ],
-        answer: "letter-spacing"
+        answer: "var"
     },
-  {
-          id: 8,
-        question: "HTML is a",
+    {
+        id: 8,
+        question: "Which rule is used in CSS for responsive design?",
         options: [
-            "Programming Language",
-            "Markup Language",
-            "Scripting Language",
-            "Interpreter Language"
+            "flex",
+            "media-query",
+            "@media",
+            "responsive"
         ],
-        answer: "Markup Language"
-    } ,
+        answer: "@media"
+    },
     {
         id: 9,
-        question: "Which HTML element is used for the largest heading?",
+        question: "Which JavaScript method selects an element using its ID?",
         options: [
-            "h1",
-            "h6",
-            "heading",
-            "head"
+            "getElementByClass()",
+            "getElementById()",
+            "querySelectorAll()",
+            "selectById()"
         ],
-        answer: "h1"
+        answer: "getElementById()"
     },
     {
         id: 10,
-        question: "Which CSS property is used to hide an element without removing it from the layout?",
+        question: "Which attribute allows inline CSS styling in HTML?",
         options: [
-            "visibility: hidden",
-            "display: none",
-            "opacity: 0",
-            "hidden: true"
+            "class",
+            "styles",
+            "style",
+            "font"
         ],
-        answer: "visibility: hidden"
+        answer: "style"
     }
 ];
 
 
+// console.log(quizQuestions);
+
+
 var questionElement = document.getElementById("questionElement")
-console.log(questionElement);
+
+
+
+
+
+var quizCounter = 0;
+
+
+
+var question = quizQuestions[quizCounter].question
+var options = quizQuestions[quizCounter].options
+console.log(quizQuestions[quizCounter].options);
+
 
 var optionElement = document.getElementById("optionElement")
 
-var counter = 0 ;
- 
-  console.log(option);
-  
-// console.log(question);
+
+
+
 function startQuiz() {
-    // var question = quizQuestions[i].question
+   console.log("startQuiz");
+ 
 
-     var question = quizQuestions[counter].question
-  var option = quizQuestions[counter].options
-    console.log("startQuiz");
+   
 
-     
-optionElement.innerHTML = ""
 
-    for(var i = 0 ; i < option.length; i++){
-        // console.log(i);
-    //    console.log(quizQuestions[i].question);
-       
+       console.log(quizQuestions[quizCounter].question);
 
-console.log(i);
-var li = `<li>${option[i]}</li>`
 
-optionElement.innerHTML += li
-    //    questionElement.innerHTML+=
+questionElement.innerHTML = question
 
 
 
+for(var i = 0 ; i < options.length ; i++){
+    var li = `<li>${options[i]}</li>`
+
+    optionElement.innerHTML += li
 }
-    questionElement.innerHTML = question
-    
+
+
 }
 
 
 
 
 function nextBtn() {
-    counter++
+
+
+
+
+
+if(quizCounter == quizQuestions.length){
+    return
+}
+
+
+
+    quizCounter++
+
     
-console.log(counter);
-console.log(quizQuestions[counter]);
+       console.log(quizQuestions[quizCounter].question);
 
+    console.log(quizCounter);
 
-startQuiz()
+    startQuiz()
 
 }

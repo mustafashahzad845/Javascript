@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body onload="startQuiz()">
   <div class="QuizContainer" id="QuizContainer">
 
@@ -18,25 +31,39 @@
 <h2>Quiz Application</h3>
 </div>
 <div class="body">
-<h2 id="questionElement"></h2>
+<h2 id="questionElement">Which element is use to make largest heading?</h2>
 <ul id="optionElement">
     <!-- <li>&lt; !--- &gt;</li>
     <li>/* */</li>
     <li>//</li>
     <li>///</li> -->
+
+
+
 </ul>
   </div>
 
 <div class="footer">
-    <p id="counterDisplay">1/10</p>
-<button onclick="nextBtn()" id="nextButton">Next</button>
+    <p id="questionCounterDisplay">1 / 10</p>
+<button  id="nextButton"  onclick="nextBtn()">Next</button>
 </div>
+
+  </div>
 
 <div id="scoreCardParent">
+    <div class="scoreCard" id="scoreCard">
+
+    </div>
     
 </div>
+<button id="backToQuizBtn">Play Again</button>
 
 
+
+
+</body>
+<script src="app.js"></script>
+</html>
 
 
 </body>
