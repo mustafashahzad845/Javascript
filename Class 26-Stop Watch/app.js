@@ -1,5 +1,5 @@
 var timeCounter = document.getElementById("timeCounter")
-
+var startBtn = document.getElementById("startBtn")
 
 var hour = 0;
 var minute = 0;
@@ -35,10 +35,17 @@ if(sec >= 10){
            `${sec = 0}0`
         }
 
+
+      startBtn.disabled = true
+      startBtn.style.opacity = "0.7"
+
         }
         ,
       
          10)
+
+
+
 
   
 return timeCounter
@@ -58,6 +65,9 @@ console.log(timeCounter);
 
 clearInterval(timer)
 
+startBtn.disabled = false
+      startBtn.style.opacity = "1"
+
 return
     }
         
@@ -75,4 +85,7 @@ clearInterval(timer)
 
         timeCounter.innerHTML = timeCounter.innerHTML = `0${hour} : 0${minute} : 0${sec} : 0${millisec}`
         
+startBtn.disabled = false
+      startBtn.style.opacity = "1"
+
     }
