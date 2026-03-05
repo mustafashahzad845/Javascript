@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+width: 100%;
+height: 100vh;
+}
+.WatchContainer{
+    /* border: 1px solid black; */
+    width: 50%;
+    margin:  0 auto;
+    padding: 40px 30px;
+        border-radius: 12px;
+
+}
+.timeContainer{
+    border: 1px solid gray;
+    padding: 20px 12px;
+    border-radius: 12px;
+    background-color: #000;
+}
+.timeContainer p{
+    text-align: center;
+    font-size: 20px;
+/* color: rgb(17, 136, 205); */
+color: #fff;
+font-weight: 700;
+}
+.buttonParent{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    
+}
+#pauseBtn{
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: blue;
+    cursor: pointer;
+}
+
+#startBtn{
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: red;
+    cursor: pointer;
+}
+
+
+#resetBtn{
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: green;
+    cursor: pointer;
+}
