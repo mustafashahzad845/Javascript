@@ -70,6 +70,9 @@ minute = 0 ;
 sec = 0 ;
 millisec = 0 
 
+
+clearInterval(timer)
+
         timeCounter.innerHTML = timeCounter.innerHTML = `0${hour} : 0${minute} : 0${sec} : 0${millisec}`
         
     }
