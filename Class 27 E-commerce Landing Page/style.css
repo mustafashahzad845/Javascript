@@ -279,3 +279,166 @@ flex-shrink: 2;
 
 }
 
+
+@media screen and (min-width : 1630px) and (max-width : 1920px) {
+    .brand-section {
+    align-items: baseline;
+    padding: 0 24px 0 40px;
+}
+
+.brand-section .logoImg {
+    width: 40px;
+}
+
+.logoText {
+    width: 100px;
+}
+
+
+.searchSection {
+    width: 60%;
+    position: relative;
+
+}
+
+.searchSection input {
+    border: transparent;
+    background-color: #fff;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.searchSection input::placeholder {
+    font-size: 16px;
+    color: rgb(179, 177, 177);
+}
+
+.searchIcon {
+    color: #0552ce;
+    position: absolute;
+    font-size: 18px;
+    top: 11px;
+    right: 10px;
+    cursor: pointer;
+}
+}
+
+
+
+@media screen and (min-width : 1520px) and (max-width : 1630px) {
+        .brand-section {
+    align-items: baseline;
+    padding: 0 24px 0 40px;
+}
+
+.brand-section .logoImg {
+    width: 40px;
+}
+
+.logoText {
+    width: 100px;
+}
+
+
+.searchSection {
+    width: 50%;
+    position: relative;
+
+}
+
+.searchSection input {
+    border: transparent;
+    background-color: #fff;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.searchSection input::placeholder {
+    font-size: 16px;
+    color: rgb(179, 177, 177);
+}
+
+.searchIcon {
+    color: #0552ce;
+    position: absolute;
+    font-size: 18px;
+    top: 11px;
+    right: 10px;
+    cursor: pointer;
+}
+}
+
+
+
+/* === Javascript card === */
+
+.card{
+    background: #fff;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: max-content;
+    width: 300px;
+    padding: 16px 12px 20px;
+    margin: 20px auto;
+    position: relative;
+}
+.card-id{
+    text-align: right;
+    color: gray;
+    margin: 0 0 12px 0;
+}
+.Image-top{
+    padding: 0 12px;
+}
+.Image-top img{
+    width: 100%;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+.card-body{
+    padding: 0px 8px;
+}
+.card-body .card-title{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: justify;
+    color: #494a51;
+    /* margin: 12px 0; */
+}
+.card-body .card-description{
+    margin: 12px 0;
+
+}
+.card-star{
+    margin: 8px 0 16px;
+    width: max-content;
+}
+.card-star i{
+        font-size: 14px;
+        color: #101010;
+
+}
+.card-price{
+    font-size: 24px;
+    font-weight: 600;
+}
+.card-cart-icon{
+background: #2667FF;
+padding: 12px;
+border-radius: 8px;
+width: max-content;
+position: absolute;
+bottom: 20px;
+right: 20px;
+cursor: pointer;
+}
+.card-cart-icon i{
+    font-size: 18px;
+    color: #fff;
+}
