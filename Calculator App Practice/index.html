@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" readonly>
+    <table border="1">
+        <tr>
+            <td onclick="AC()">AC</td>
+            <td onclick="del()">DEL</td>
+            <td onclick="percentage()">%</td>
+            <td onclick="addNumber('/')">/</td>
+        </tr>
+
+        <tr>
+            <td onclick="addNumber(7)">7</td>
+            <td onclick="addNumber(8)">8</td>
+            <td onclick="addNumber(9)">9</td>
+            <td onclick="addNumber('*')">*</td>
+        </tr>
+
+        <tr>
+            <td onclick="addNumber(4)">4</td>
+            <td onclick="addNumber(5)">5</td>
+            <td onclick="addNumber(6)">6</td>
+            <td onclick="addNumber('-')">-</td>
+        </tr>
+
+        <tr>
+            <td onclick="addNumber(1)">1</td>
+            <td onclick="addNumber(2)">2</td>
+            <td onclick="addNumber(3)">3</td>
+            <td onclick="addNumber('+')">+</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" onclick="addNumber(0)" id="zerobtn">0</td>
+            <td onclick="addNumber('.')">.</td>
+            <td onclick="calculate()">=</td>
+            <!-- <td>/</td> -->
+        </tr>
+    </table>
+
+</body>
+<script src="app.js"></script>
+</html>
