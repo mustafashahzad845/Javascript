@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    /* .input{
+        width: 50%;
+        border-radius: 12px;
+        border: 1px solid #000;
+    } */
+</style>
+
+</head>
+<body>
+    <!-- <div id="ParagraphParent"> -->
+        <!-- <p>para 1</p>
+        <p>para 2</p>
+        <p>para 3</p> -->
+    <!-- </div> -->
+
+<input type="text" id="input" readonly>
+    <table border="1">
+        <tr>
+            <td onclick="AC()">AC</td>
+            <td onclick="del()">DEL</td>
+            <td onclick="percentage()">%</td>
+            <td onclick="addNumber('/')">/</td>
+        </tr>
+
+        <tr>
+            <td onclick="addNumber(7)">7</td>
+            <td onclick="addNumber(8)">8</td>
+            <td onclick="addNumber(9)">9</td>
+            <td onclick="addNumber('*')">*</td>
+        </tr>
+
+        <tr>
+            <td onclick="addNumber(4)">4</td>
+            <td onclick="addNumber(5)">5</td>
+            <td onclick="addNumber(6)">6</td>
+            <td onclick="addNumber('-')">-</td>
+        </tr>
+
+        <tr>
+            <td onclick="addNumber(1)">1</td>
+            <td onclick="addNumber(2)">2</td>
+            <td onclick="addNumber(3)">3</td>
+            <td onclick="addNumber('+')">+</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" onclick="addNumber(0)">0</td>
+            <td onclick="addNumber('.')">.</td>
+            <td onclick="calculate()">=</td>
+            <!-- <td>/</td> -->
+        </tr>
+    </table>
+
+<!-- <input type="text" id="input"> -->
+
+</body>
+<script src="app.js"></script>
+</html>
