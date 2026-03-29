@@ -12,7 +12,7 @@ var millisec = 0;
 var timer ;
 
   function startWatch() {
-    console.log("startWatch");
+//     console.log("startWatch");
     
   timer = setInterval(
         function() {
@@ -59,7 +59,7 @@ return timeCounter
 
 
     function pauseWatch() {
-console.log(timeCounter);
+// console.log(timeCounter);
 
 
 
@@ -73,7 +73,7 @@ return
         
 
     function resetWatch() {
-        console.log("resetWatch");
+        // console.log("resetWatch");
 
 hour = 0 ;
 minute = 0 ;
