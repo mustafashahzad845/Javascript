@@ -265,7 +265,7 @@ allClickAttributeRemove()
 
 }
 
-    console.log("clickFun" , td);
+    // console.log("clickFun" , td);
 
 td.removeAttribute("onclick")
 
