@@ -276,3 +276,6 @@ return td
 
 
 
+let playAgain = _ => {
+ location.href = "index.html"   
+}
