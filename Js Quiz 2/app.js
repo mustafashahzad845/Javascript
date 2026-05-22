@@ -50,6 +50,21 @@
 
 
 
-let num = 78.54754
+// let num = 78.54754
 // num = parseFloat(num.toFixed(2))
-console.log(num );
+// console.log(num );
+
+
+// var num = 5.65;
+// console.log(num.toFixed(1));
+
+
+// var num = "7.8kg"
+// console.log(parseFloat(num));
+
+
+// console.log(Math.ceil(9.000000000000001));
+
+const arr = ["a" , "d"]
+arr.splice(1, 0 , "b" , "c")
+console.log(arr);
